@@ -4,17 +4,17 @@
 \mtcaddchapter
 \section*{Introduction}
 \justifying
-L’étape d’analyse et spécification des besoins est une étape indispensable pour comprendre les fonctionnalités que le système doit fournir. Ce chapitre sera consacré à détailler cette étape: Nous commencerons par l’identification des acteurs. Puis, nous élaborons le diagramme de contexte de notre système. Ensuite, nous allons faire un recueil sur  les besoins fonctionnels et non fonctionnels de notre projet. Ci-après, nous allons spécifier et analyser les besoins identifiés en se basant sur le modèle de cas d’utilisation et le diagramme de séquence d'analyse du langage  \textbf{U}nified  \textbf{M}odeling  \textbf{L}anguage \textbf{(UML)}. Enfin, un recueil sur les besoins techniques sera présenté tout en citant les frameworks choisis.
+L’étape d’analyse et spécification des besoins est une étape indispensable dans la méthode 2TUP pour comprendre les fonctionnalités que le système doit fournir. Ce chapitre sera consacré à détailler cette étape: Nous commencerons par l’identification des acteurs. Puis, nous élaborons le diagramme de contexte de notre système. Ensuite, nous allons faire un recueil sur  les besoins fonctionnels et non fonctionnels de notre projet. Ci-après, nous allons spécifier et analyser les besoins identifiés en se basant sur le modèle de cas d’utilisation et le diagramme de séquence d'analyse du langage  \textbf{U}nified  \textbf{M}odeling  \textbf{L}anguage \textbf{(UML)}. Enfin, un recueil sur les besoins techniques sera présenté tout en citant les frameworks choisis.
 
 
 \section{Identification des acteurs}
 \justifying
-Un acteur est une entité externe qui définit le rôle joué par un utilisateur, humain ou non humain, qui interagit avec un système interactiff. \cite{acteur}\\
+Un acteur est une entité externe qui définit le rôle joué par un utilisateur, humain ou non humain, qui interagit avec un système interactif \cite{acteur}.\\
 Notre système comporte les acteurs suivants:
 \begin{itemize}[itemsep=2pt, parsep=2pt]
     \item \textbf{Etudiant}: L'étudiant, en tant qu'utilisateur inscrit, est au cœur de notre système qui peut interagir avec notre chatbot Mixture of Experts et bénéficier de ses services intelligents. Ainsi, il peut accéder aux salons virtuels (Classrooms) et leurs contenus auxquels il est affilié  c-à-d les ressources pédagogiques de ses enseignants. Ensuite, cet utilisateur peut partager des supports pédagogiques (de ses enseignants ou provenant de sources externes) dans un espace de chat instantané, sollicitant ainsi d'une gamme de services intelligents tels que l'explication, la traduction, la correction d'exercices, la génération de résumés, etc. Ces fonctionnalités sont conçues pour clarifier ses cours, assurant une assistance personnalisée tout au long de son apprentissage.
     \item \textbf{Enseignant}:  L'acteur enseignant est un utilisateur qui admet un compte et joue un rôle actif dans l'expérience d'apprentissage en ligne en facilitant le partage de connaissances et en favorisant un environnement collaboratif au sein de notre plateforme. Ainsi, il bénéficie d'outils conviviaux lui permettant de créer et de gérer des classrooms dédiés à ses cours et y partage ses ressources pédagogiques (cours, fascicule, corrections des fascicules, etc..). Il peut organiser les ressources pédagogiques de manière structurée, favorisant ainsi un accès facile et une interaction fluide avec les étudiants.
-    \item \textbf{Modèle MoE (Modèle Mixture of Experts)}:  Le modèle Mixture Of Experts est un composant système qui permet de répondre aux questions et requêtes des étudiants en se basant sur les ressources pédagogiques publiées sur la plateforme et ainsi de clarifier leurs lacunes. En analysant les matériaux pédagogiques, le modèle fournit des explications détaillées et des exemples pertinents pour clarifier les concepts difficiles offrant un soutien individualisé aux étudiants et améliorant leur compréhension du contenu éducatif.
+    \item \textbf{Modèle MoE (Modèle Mixture of Experts)}:  Le modèle Mixture Of Experts est un composant système qui permet de répondre aux questions et requêtes des étudiants en se basant sur les ressources pédagogiques publiées sur la plateforme ou provenant de sources externes et ainsi de clarifier leurs lacunes. En analysant les matériaux pédagogiques, le modèle fournit des explications détaillées et des exemples pertinents pour clarifier les concepts difficiles offrant un soutien individualisé aux étudiants et améliorant leur compréhension du contenu éducatif.
 \end{itemize}
 
 \section{Modèle informationnel de contexte}
@@ -68,9 +68,9 @@ Les besoins non fonctionnels de notre système sont:
 \begin{itemize}[itemsep=1pt, parsep=1pt]
     \item \textbf{La sécurité : }L'application doit garantir à l'utilisateur connecté l'intégrité et la confidentialité de ses données.
     \item \textbf{La convivialité : }La conception de l’interface utilisateur doit être simple et intuitive permettant aux utilisateurs de naviguer facilement dans le système et d’accomplir leurs tâches de manière efficace et agréable.
-    \item \textbf{La performance : } Le système doit être en mesure de fournir des performances rapides et efficaces.
-    \item \textbf{Fiabilité : } L’application doit fonctionner de façon cohérente pour les utilisateurs.
-    \item \textbf{Rapidité: } Le système doit traiter les requêtes en temps réel et fournir des réponses instantanées aux étudiants pour répondre à leurs besoins. 
+    \item \textbf{La performance : }Le système doit être en mesure de fournir des performances rapides et efficaces.
+    \item \textbf{Fiabilité : }L’application doit fonctionner de façon cohérente pour les utilisateurs.
+    \item \textbf{Rapidité : }Le système doit traiter les requêtes en temps réel et fournir des réponses instantanées aux étudiants pour répondre à leurs besoins. 
 \end{itemize}
 
 \section{Spécification des besoins }
@@ -78,7 +78,7 @@ Pour une meilleure documentation de notre plateforme, nous allons formaliser, da
 
 \subsection{Diagramme de cas d’utilisation global}
 Le diagramme de cas d'utilisation est le mécanisme le plus populaire pour la spécification des exigences. Il illustre les interactions entre les acteurs et le système. En outre, il donne une vue d'ensemble des fonctionnalités que le système doit offrir pour répondre aux besoins des utilisateurs.\\
-La Figure \ref{fig:diagramme de cas d’utilisation global} illustre le diagramme de cas d’utilisation global de notre application.
+La Figure \ref{fig:diagramme de cas d’utilisation global} illustre le diagramme de cas d’utilisation global de notre plateforme.
 
 \begin{figure}[H]
     \centering
@@ -120,7 +120,7 @@ La Figure \ref{fig: Diagramme de cas d’utilisation détaillé de l’acteur <<
 \end{figure}
 
 \subsection{Analyse des besoins}
-L'analyse des besoins est une étape importante permettant de représenter le comportement du système au fil du temps. Dans le contexte de la modélisation orienté objet l’analyse des besoins peut se faire par les descriptions textuelles et les diagrammes de séquence d'analyse. Une description textuelle est description des scénarios nominaux, d'extension et d'exception d’un cas d'utilisation. Un diagramme de séquence d'analyse, dite aussi acteur-système, est une représentation graphique utilisée pour montrer l’interaction entre les acteurs et le système où le système est représenté sous d'une boîte noire. Dans cette section, nous présenterons les descriptions textuelles et les diagrammes de séquence d'analyse relatifs aux principaux cas d’utilisation de notre plateforme.
+L'analyse des besoins est une étape importante permettant de représenter le comportement du système au fil du temps. Dans le contexte de la modélisation orienté objet, l’analyse des besoins peut se faire par les descriptions textuelles et les diagrammes de séquence d'analyse. Une description textuelle est description des scénarios nominaux, d'extension et d'exception d’un cas d'utilisation. Un diagramme de séquence d'analyse, dite aussi acteur-système, est une représentation graphique utilisée pour montrer l’interaction entre les acteurs et le système où le système est représenté sous d'une boîte noire. Dans cette section, nous présenterons les descriptions textuelles et les diagrammes de séquence d'analyse relatifs aux principaux cas d’utilisation de notre plateforme.
 
 \subsubsection{Cas d’utilisation << S’identifier >> }
 \begin{itemize}[itemsep=1pt, parsep=1pt]
