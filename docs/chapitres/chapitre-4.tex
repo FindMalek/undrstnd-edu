@@ -120,9 +120,17 @@ La Figure 4.6 illustre le diagramme de classes d’analyse de notre plateforme.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.1\textwidth,height=1.5\textwidth]{images/chp4/fig6.png}
-    \caption{Diagramme de classes}
-    \label{fig:Diagramme de classes}    
+    \includegraphics[width=1.1\textwidth,height=1.32\textwidth]{images/chp4/fig6.png}
+    \caption{Diagramme de classes d'analyse}
+    \label{fig:Diagramme de classes d'analyse}    
+\end{figure}
+
+La Figure 4.7 illustre le diagramme de classes de conception de notre plateforme selon les trois couches du patron MVC.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.5\textwidth,height=1.12\textwidth,angle=90]{images/chp4/fig7.png}
+    \caption{Diagramme de classes de conception }
+    \label{fig:Diagramme de classes selon le patron MVC}    
 \end{figure}
 
 \subsection{Conception de la vue dynamique}
@@ -134,26 +142,26 @@ Dans cette partie, nous mettons en évidence la progression des opérations et d
 \begin{itemize}[itemsep=1pt, parsep=1pt]
     \newpage
     \item \textbf{Diagramme de séquence de conception « S’identifier » }\\
-        La Figure 4.7 illustre le diagramme de séquence de conception \textbf{« S’identifier »} 
+        La Figure 4.8 illustre le diagramme de séquence de conception \textbf{« S’identifier »} 
         \begin{figure}[H]
             \centering
-            \includegraphics[width=1.32\textwidth,height=1\textwidth,angle=90]{images/chp4/fig7.png}
+            \includegraphics[width=1.32\textwidth,height=1\textwidth,angle=90]{images/chp4/fig8.png}
             \caption{Diagramme de séquence de conception « S’identifier »}
             \label{fig:Diagramme de séquence de conception « S’identifier »}    
         \end{figure}
     \item \textbf{Diagramme de séquence de conception « Créer classroom » }\\
-        La Figure 4.8 illustre le diagramme de séquence de conception \textbf{« Créer classroom »} 
+        La Figure 4.9 illustre le diagramme de séquence de conception \textbf{« Créer classroom »} 
         \begin{figure}[H]
             \centering
-            \includegraphics[width=1.32\textwidth,height=1\textwidth,angle=90]{images/chp4/fig8.png}
+            \includegraphics[width=1.32\textwidth,height=1\textwidth,angle=90]{images/chp4/fig9.png}
             \caption{Diagramme de séquence de conception « Créer classroom »}
             \label{fig:Diagramme de séquence de conception « Créer classroom »}    
         \end{figure}
     \item \textbf{Diagramme de séquence de conception « Démarrer chat »}\\
-    La Figure 4.9 illustre le diagramme de séquence de conception \textbf{« Démarrer chat »} 
+    La Figure 4.10 illustre le diagramme de séquence de conception \textbf{« Démarrer chat »} 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=1.32\textwidth,height=1\textwidth,angle=90]{images/chp4/fig9.png}
+        \includegraphics[width=1.32\textwidth,height=1\textwidth,angle=90]{images/chp4/fig10.png}
         \caption{Diagramme de séquence de conception « Démarrer chat »}
         \label{fig:Diagramme de séquence de conception « Démarrer chat »}    
     \end{figure}
@@ -163,11 +171,11 @@ Dans cette partie, nous mettons en évidence la progression des opérations et d
 \subsubsection{Diagramme d’activité « Modifier profil »}
 \justifying
 Le diagramme d'activité illustre le déroulement des opérations et des actions au sein d'un processus. Il offre la possibilité de représenter le processus séquentiel des étapes d'un système ainsi que les choix effectués à chaque étape. \\
-La Figure 4.10 illustre le diagramme d’activité pour le cas d’utilisation \textbf{<< Modifier profil >>} sachant que l'utilisateur peut être soit un étudiant, soit un enseignant.
+La Figure 4.11 illustre le diagramme d’activité pour le cas d’utilisation \textbf{<< Modifier profil >>} sachant que l'utilisateur peut être soit un étudiant, soit un enseignant.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{images/chp4/fig10.png}
+    \includegraphics[width=\textwidth]{images/chp4/fig11.png}
     \caption{Diagramme d’activité « Modifier Profil »}
     \label{fig:Diagramme d’activité « Modifier Profil »}    
 \end{figure}
@@ -175,11 +183,11 @@ La Figure 4.10 illustre le diagramme d’activité pour le cas d’utilisation \
 \subsubsection{Diagramme d’états-transitions « Classroom »}
 \justifying
 Le diagramme d'états-transitions illustre les divers états d'un objet ou d'un système. Il permet de représenter les changements d’état qui peuvent se produire en réponse à des événements spécifiques.\\
-La Figure 4.11 illustre le diagramme d’états-transitions de l’objet \textbf{<<Classroom>>} qui peut être  \textbf{<<désarchivé>>} ou  \textbf{<<archivé>>}.
+La Figure 4.12 illustre le diagramme d’états-transitions de l’objet \textbf{<<Classroom>>} qui peut être  \textbf{<<désarchivé>>} ou  \textbf{<<archivé>>}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth,height=0.28\textwidth]{images/chp4/fig11.png}
+    \includegraphics[width=\textwidth,height=0.28\textwidth]{images/chp4/fig12.png}
     \caption{Diagramme d’états-transitions d'objet « Classroom »}
     \label{fig:Diagramme d’états-transitions d'objet « Classroom »}    
 \end{figure}
@@ -187,11 +195,11 @@ La Figure 4.11 illustre le diagramme d’états-transitions de l’objet \textbf
 \subsubsection{Diagramme de timing}
 Un diagramme de timing (temps) est un genre de diagrammes d'interaction qui est spécialement conçu pour prendre en compte les contraintes temporelles d'un logiciel.\\
 Dans ce type de diagramme, les messages représentent les communications ou les interactions entre les différentes entités du système. Ils peuvent être synchrones, asynchrones ou des appels de méthodes. En plus, le diagramme de timing peut inclure aussi des informations sur les états des entités impliquées à des différents moments de l’exécution du système.\\
-La Figure 4.12 illustre le diagramme de timing du cas d’utilisation \textbf{<< Démarrer chat >>} et plus spécifiquement lors de l’envoie d’un message.
+La Figure 4.13 illustre le diagramme de timing du cas d’utilisation \textbf{<< Démarrer chat >>} et plus spécifiquement lors de l’envoie d’un message.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{images/chp4/fig12.png}
+    \includegraphics[width=\textwidth]{images/chp4/fig13.png}
     \caption{Diagramme de timing « Démarrer chat »}
     \label{fig:Diagramme de timing « Démarrer chat »}    
 \end{figure}
@@ -203,40 +211,40 @@ Dans ce qui suit, nous allons présenter quelques exemples de maquettes de notre
 \begin{itemize}
     \item \textbf{Maquette << Register Page >>}
 \end{itemize}
-La Figure 4.13 montre la maquette de l’interface \textbf{<< Register Page >>}
+La Figure 4.14 montre la maquette de l’interface \textbf{<< Register Page >>}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth,height=0.4\textwidth]{images/chp4/fig13.png}
+    \includegraphics[width=0.85\textwidth,height=0.4\textwidth]{images/chp4/fig14.png}
     \caption{Maquette de l’interface << Register Page >>}
     \label{fig:Maquette de l’interface <<Register Page>>}    
 \end{figure}
 \begin{itemize}
     \item \textbf{Maquette << Classroom Page >>}
 \end{itemize}
-La Figure 4.14 montre la maquette de l’interface \textbf{<< Classroom Page >>}
+La Figure 4.15 montre la maquette de l’interface \textbf{<< Classroom Page >>}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth,height=0.4\textwidth]{images/chp4/fig14.png}
+    \includegraphics[width=0.85\textwidth,height=0.4\textwidth]{images/chp4/fig15.png}
     \caption{Maquette de l’interface << Classroom Page >>}
     \label{fig:Maquette de l’interface <<Classroom Page>>}    
 \end{figure}
 \begin{itemize}
     \item \textbf{Maquette <<Chat Page>>}
 \end{itemize}
-La Figure 4.15 montre la maquette de l’interface \textbf{<< Chat Page >>}
+La Figure 4.16 montre la maquette de l’interface \textbf{<< Chat Page >>}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth,height=0.5\textwidth]{images/chp4/fig15.png}
+    \includegraphics[width=0.85\textwidth,height=0.5\textwidth]{images/chp4/fig16.png}
     \caption{Maquette de l’interface << Chat Page >>}
     \label{fig:Maquette de l’interface <<Chat Page>>}    
 \end{figure}
 \begin{itemize}
     \item \textbf{Maquette << Chat Page with uploading File >>}
 \end{itemize}
-La Figure 4.16 montre la maquette de l’interface \textbf{ << Chat Page >>}, plus spécifiquement lors de l’importation d’un fichier.
+La Figure 4.17 montre la maquette de l’interface \textbf{ << Chat Page >>}, plus spécifiquement lors de l’importation d’un fichier.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth,height=0.5\textwidth]{images/chp4/fig16.png}
+    \includegraphics[width=0.85\textwidth,height=0.5\textwidth]{images/chp4/fig17.png}
     \caption{Maquette de l’interface << Chat Page with uploading File >>}
     \label{fig:Maquette de l’interface <<Chat Page with uploading File>>}    
 \end{figure}
