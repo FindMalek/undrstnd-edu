@@ -28,7 +28,7 @@ Ces réseaux de neurones sont organisés en couches. Chaque couche transforme l'
 \justifying
 Dans cette section, nous allons clarifier quelques concepts fondamentaux.
 
-\subsubsection{Natural Language Processing(NLP)}
+\subsubsection{Natural Language Processing (NLP)}
 \justifying
 Le traitement automatique du langage naturel (NLP) est un domaine de l'intelligence artificielle qui se concentre sur l'interaction entre les ordinateurs et les êtres humains via le langage naturel. Le but du NLP est de permettre aux machines de comprendre, interpréter et répondre au langage humain d'une manière à la fois utile et significative.
 
@@ -51,7 +51,7 @@ Dynamic RAG (Retrieval Augmented Generation) est une approche avancée de RAG qu
 Dans un système RAG standard, la stratégie de récupération d'informations est généralement fixe et déterminée à l'avance. Par exemple, le système doit toujours chercher dans la même base de données de textes.\\
 Alors que dans un système Dynamic RAG, le système peut adapter sa stratégie de récupération d'informations en fonction de la tâche à accomplir. Par exemple, pour une tâche de réponse à des questions, le système peut chercher dans une base de données de textes spécifique.\\
 Cette approche permet au système d'être plus flexible et adaptable, ce qui lui permet d’améliorer ses performances sur une variété de tâches.\\
-La Figure 2.1. synthétise les étapes et le déroulement  de Dynamic RAG.
+La Figure 2.1 synthétise les étapes et le déroulement  de Dynamic RAG.
 
 \begin{figure}[H]
     \centering
@@ -71,7 +71,7 @@ Bien notez que les informations de cette section sont issues de la référence s
 La couche Sparse MoE est une composante clé des modèles de transformers remplaçant les couches traditionnelles de réseaux de neurones denses. Chaque couche Sparse MoE est constituée de multiples "experts" qui sont essentiellement des réseaux de neurones. Ces experts sont souvent des réseaux feed-forward (FFN) et peuvent aussi être plus complexes ou former un autre MoE permettant ainsi des MoEs hiérarchiques.\\
 En plus des experts, une couche Sparse MoE inclut un réseau de portes ou "routeur". Ce routeur détermine comment les tokens sont distribués aux experts. Il est important de noter qu'un même token peut être attribué à plusieurs experts.\\
 Le routeur est constitué de paramètres appris et entraîné avec le reste du réseau.\\
-La Figure 2.2. synthétise l’architecture de l’algorithme Sparse Mixture of Experts.
+La Figure 2.2 synthétise l’architecture de l’algorithme Sparse Mixture of Experts.
 
 \begin{figure}[H]
     \centering

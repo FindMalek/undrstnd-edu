@@ -103,7 +103,7 @@ Pour organiser un modèle MCD, différents modèles logiques de données peuvent
 \textbf{Teacher} ( \textbf{\uline{id\_teacher}} , \#id\_user ) \\
 \textbf{Student} ( \textbf{\uline{id\_student}} , \#id\_user ) \\
 \textbf{Classroom} ( \textbf{\uline{id\_classroom}} , classCode , name , description , isArchived , createdAt , updatedAt , \#id\_teacher ) \\
-\textbf{Post} ( \textbf{\uline{id\_post}} , name , content , createdAt , updatedAt , \#id\_teacher , \#id\_classroom) \\
+\textbf{Post} ( \textbf{\uline{id\_post}} , name , content , createdAt , updatedAt , \#id\_teacher , \#id\_classroom ) \\
 \textbf{File} ( \textbf{\uline{id\_file}} , size , name , type , url , \#id\_post , \#id\_student ) \\
 \textbf{Comment} ( \textbf{\uline{id\_comment}}, text, createdAt , updatedAt , \#id\_user , \#id\_post ) \\
 \textbf{Reaction} ( \textbf{\uline{id\_reaction}} , reactionType , createdAt , \#id\_user , \#id\_post ) \\
