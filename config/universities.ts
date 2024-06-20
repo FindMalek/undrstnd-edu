@@ -3,6 +3,14 @@ import { EmailOption, TranslationFunction } from "@/types"
 // #TODO: Create an API & NPM package for list of universities
 export function getEmailOptions() {
   return [
+    "isethm.u-monastir.tn",
+    "isetkh.u-monastir.tn",
+    "issatmh.u-monastir.tn",
+    "isima.u-monastir.tn",
+    "fphm.u-monastir.tn",
+    "fmdm.u-monastir.tn",
+    "fmm.u-monastir.tn",
+    "fsm.u-monastir.tn",
     "isimm.u-monastir.tn",
     "ensi.rnu.tn",
     "insat.rnu.tn",
@@ -24,6 +32,70 @@ export function getTranslatedEmailOptions(
   t: TranslationFunction
 ): EmailOption[] {
   return [
+    {
+      label: t("options.iseahm"),
+      abbrev: "ISEAHM",
+      value: "isethm.u-monastir.tn",
+      email: "mail@iseahm.com",
+      phone: "+216 73 460 000",
+      avatarUrl: "https://placehold.co/600x400?text=ISEAHM",
+    },
+    {
+      label: t("options.isetkh"),
+      abbrev: "ISETKH",
+      value: "isetkh.u-monastir.tn",
+      email: "mail@isetkh.com",
+      phone: "+216 73 460 000",
+      avatarUrl: "https://placehold.co/600x400?text=ISETKH",
+    },
+    {
+      label: t("options.issatmh"),
+      abbrev: "ISSATMH",
+      value: "issatmh.u-monastir.tn",
+      email: "mail@fmm.com",
+      phone: "+216 73 460 000",
+      avatarUrl: "https://placehold.co/600x400?text=ISSATMH",
+    },
+    {
+      label: t("options.isima"),
+      abbrev: "ISIMA",
+      value: "isima.u-monastir.tn",
+      email: "mail@fmm.com",
+      phone: "+216 73 460 000",
+      avatarUrl: "https://placehold.co/600x400?text=ISIMA",
+    },
+    {
+      label: t("options.fphm"),
+      abbrev: "FPHM",
+      value: "fphm.u-monastir.tn",
+      email: "mail@fmm.com",
+      phone: "+216 73 460 000",
+      avatarUrl: "https://placehold.co/600x400?text=FPHM",
+    },
+    {
+      label: t("options.fmdm"),
+      abbrev: "FMDM",
+      value: "fmdm.u-monastir.tn",
+      email: "mail@fmm.com",
+      phone: "+216 73 460 000",
+      avatarUrl: "https://placehold.co/600x400?text=FMDM",
+    },
+    {
+      label: t("options.fmm"),
+      abbrev: "FMM",
+      value: "fmm.u-monastir.tn",
+      email: "mail@fmm.com",
+      phone: "+216 73 460 000",
+      avatarUrl: "https://placehold.co/600x400?text=FMM",
+    },
+    {
+      label: t("options.fsm"),
+      abbrev: "FSM",
+      value: "fsm.u-monastir.tn",
+      email: "mail@fsm.com",
+      phone: "+216 73 460 000",
+      avatarUrl: "https://placehold.co/600x400?text=FSM",
+    },
     {
       label: t("options.isimm"),
       abbrev: "ISIMM",
