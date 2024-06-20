@@ -20,11 +20,13 @@ import { sendMail } from "@/undrstnd/mailer"
 interface ShareClassroomProps {
   students: Student & { user: User }[]
   classroom: Classroom & { teacher: Teacher & { user: User } }
+  user: User
 }
 
 export function FeedClassroomShare({
   classroom,
   students,
+  user,
 }: ShareClassroomProps) {
   const [open, setOpen] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -75,54 +77,58 @@ export function FeedClassroomShare({
             {isCopied ? t("copied") : t("copy")}
           </Button>
         </div>
-        <Separator className="my-4" />
-        <div className="space-y-4">
-          <h4 className="text-sm font-medium">{t("student-university")}</h4>
-          <ScrollArea className="grid h-[200px] px-2">
-            {students.length === 0 && (
-              <p className="text-sm text-muted-foreground">
-                {t("no-students")}
-              </p>
-            )}
+        {user.role === "TEACHER" && (
+          <>
+            <Separator className="my-4" />
+            <div className="space-y-4">
+              <h4 className="text-sm font-medium">{t("student-university")}</h4>
+              <ScrollArea className="grid h-[200px] px-2">
+                {students.length === 0 && (
+                  <p className="text-sm text-muted-foreground">
+                    {t("no-students")}
+                  </p>
+                )}
 
-            {students.map((student) => (
-              <div
-                key={student.user.id}
-                className="mb-6 flex items-center justify-between space-x-4"
-              >
-                <div className="flex items-center space-x-4">
-                  <Image
-                    src={student.user.image!}
-                    alt="Avatar"
-                    width={32}
-                    height={32}
-                    className="rounded-full"
-                  />
-                  <div>
-                    <p className="text-sm font-medium leading-none">
-                      {student.user.name}
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      {student.user.email}
-                    </p>
+                {students.map((student) => (
+                  <div
+                    key={student.user.id}
+                    className="mb-6 flex items-center justify-between space-x-4"
+                  >
+                    <div className="flex items-center space-x-4">
+                      <Image
+                        src={student.user.image!}
+                        alt="Avatar"
+                        width={32}
+                        height={32}
+                        className="rounded-full"
+                      />
+                      <div>
+                        <p className="text-sm font-medium leading-none">
+                          {student.user.name}
+                        </p>
+                        <p className="text-sm text-muted-foreground">
+                          {student.user.email}
+                        </p>
+                      </div>
+                    </div>
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      onClick={() => inviteStudent(student as any)}
+                      disabled={invitedStudents.includes(student.user.email)}
+                    >
+                      {invitedStudents.includes(student.user.email) ? (
+                        <Icons.userCheck className="size-4" />
+                      ) : (
+                        <Icons.userPlus className="size-4" />
+                      )}
+                    </Button>
                   </div>
-                </div>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={() => inviteStudent(student as any)}
-                  disabled={invitedStudents.includes(student.user.email)}
-                >
-                  {invitedStudents.includes(student.user.email) ? (
-                    <Icons.userCheck className="size-4" />
-                  ) : (
-                    <Icons.userPlus className="size-4" />
-                  )}
-                </Button>
-              </div>
-            ))}
-          </ScrollArea>
-        </div>
+                ))}
+              </ScrollArea>
+            </div>
+          </>
+        )}
       </ResponsiveDialog>
     </>
   )

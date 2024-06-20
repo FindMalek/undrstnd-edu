@@ -40,12 +40,7 @@ async function getClassrooms(user: User) {
     )
 
     if (res.ok) {
-      const data: Classroom[] = await res.json()
-      return data.filter(
-        (classroom) =>
-          new Date().getTime() - new Date(classroom.createdAt).getTime() <
-          7 * 24 * 60 * 60 * 1000
-      )
+      return (await res.json()) as Classroom[]
     } else {
       return []
     }

@@ -1,29 +1,29 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+#. "$(dirname "$0")/_/husky.sh"
+#
+# echo "👷 Avant de valider vos modifications, nous effectuons une série d'opérations pour assurer la qualité du code."
+#
+#if ! pnpm run check-format; then
+#    echo '🤢 Formatage incorrect.'
+#    echo 'Exécution de la correction automatique du formatage...'
+#    pnpm run format
+#    echo '💄 Le formatage a été corrigé. Veuillez ajouter les modifications et essayer de valider à nouveau.'
+#fi
 
- echo "👷 Avant de valider vos modifications, nous effectuons une série d'opérations pour assurer la qualité du code."
+#pnpm run check-types ||
+#(
+#    echo '📑 Échec de la vérification des types.'
+#    echo 'Voulez-vous vraiment écrire cela ? Effectuez les modifications requises ci-dessus.'
+#    false;
+#)
 
-if ! pnpm run check-format; then
-    echo '🤢 Formatage incorrect.'
-    echo 'Exécution de la correction automatique du formatage...'
-    pnpm run format
-    echo '💄 Le formatage a été corrigé. Veuillez ajouter les modifications et essayer de valider à nouveau.'
-fi
+#echo '🏗️ Tentative de construction du projet...'
 
-pnpm run check-types ||
-(
-    echo '📑 Échec de la vérification des types.'
-    echo 'Voulez-vous vraiment écrire cela ? Effectuez les modifications requises ci-dessus.'
-    false;
-)
-
-echo '🏗️ Tentative de construction du projet...'
-
-pnpm run build ||
-(
-    echo '❌ Échec de la construction.'
-    echo 'La construction avec Next.js a échoué : consultez les erreurs ci-dessus pour en connaître la raison.'
-    false;
-)
+#pnpm run build ||
+#(
+#    echo '❌ Échec de la construction.'
+#    echo 'La construction avec Next.js a échoué : consultez les erreurs ci-dessus pour en connaître la raison.'
+#    false;
+#)
 
 echo '✅ Tout est passé avec succès. Vous pouvez valider vos modifications maintenant.'

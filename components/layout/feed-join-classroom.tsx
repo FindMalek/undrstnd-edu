@@ -120,7 +120,7 @@ export function FeedJoinClassroom({ student }: { student: Student }) {
                       aria-label="classroom-code"
                       {...field}
                       disabled={isLoading}
-                      className="font-sm h-11 w-full rounded-lg border border-border bg-transparent px-3 py-1 text-xs text-primary outline-none"
+                      className="font-sm h-11 w-full rounded-lg border-2 border-secondary-foreground/20 bg-transparent px-3 py-1 text-xs text-primary outline-none"
                     />
                     <SubmitButton pending={isLoading} t={t} />
                   </fieldset>

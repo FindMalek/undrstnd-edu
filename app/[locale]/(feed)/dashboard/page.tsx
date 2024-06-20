@@ -45,22 +45,20 @@ export default async function DashboardPage({
   unstable_setRequestLocale(locale)
 
   const user = await getCurrentUser()
+  const t = await getTranslations("Pages.TeacherDashboard")
 
-  if (!user) {
-    return redirect("/login")
+  if (!user || user.role != "TEACHER") {
+    return redirect("/feed")
   }
 
   const classrooms = await getClassrooms(user!)
 
-  if (user.role === "TEACHER") {
-    const t = await getTranslations("Pages.TeacherDashboard")
-    return (
-      <div className="container mx-auto py-10">
-        <div className="mb-10 text-center text-xl font-bold md:text-3xl">
-          {t("title")}
-        </div>
-        <DataTable columns={columns} data={classrooms as any} />
+  return (
+    <div className="container mx-auto py-10">
+      <div className="mb-10 text-center text-xl font-bold md:text-3xl">
+        {t("title")}
       </div>
-    )
-  } else return <div>Student Dashboard</div>
+      <DataTable columns={columns} data={classrooms as any} />
+    </div>
+  )
 }

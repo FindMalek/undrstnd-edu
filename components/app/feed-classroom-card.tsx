@@ -15,7 +15,7 @@ import { CopyText } from "@/components/ui/copy-text"
 import { getStudentsUniversity } from "@/undrstnd/classroom"
 
 interface classroomCardProps {
-  entity: Teacher | Student
+  entity: (Teacher & { user: User }) | (Student & { user: User })
   classroom: Classroom & {
     teacher: { user: User; id: string; userId: string }
   }
@@ -67,6 +67,7 @@ export async function FeedClassroomCard({
                 </Button>
               </Link>
               <FeedClassroomShare
+                user={entity.user as User}
                 classroom={classroom}
                 students={students as any}
               />
