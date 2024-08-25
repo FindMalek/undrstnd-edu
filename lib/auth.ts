@@ -77,9 +77,10 @@ export const authOptions: NextAuthOptions = {
     },
     async jwt({ token, user }): Promise<JWT> {
       if (user) {
-        if (!verifyEmail(user.email as string)) {
-          throw new Error("Invalid email address")
-        }
+        // FIX: Removed
+        //if (!verifyEmail(user.email as string)) {
+        //  throw new Error("Invalid email address")
+        //}
 
         const dbUser = await db.user.findFirst({
           where: {
