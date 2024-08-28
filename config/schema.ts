@@ -14,7 +14,7 @@ export function getUserAuthSchema(
       .email({
         message: invalidEmail,
       })
-      .refine(
+/*       .refine(
         (value) => {
           const [, domain] = value.split("@")
           return emailOptions.includes(domain)
@@ -22,7 +22,7 @@ export function getUserAuthSchema(
         {
           message: invalidUniversityEmail,
         }
-      ),
+      ), */
   })
 }
 

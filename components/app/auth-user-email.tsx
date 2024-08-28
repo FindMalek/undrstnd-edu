@@ -3,7 +3,7 @@
 import * as React from "react"
 import { useSearchParams } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { redirect, useRouter } from "@navigation"
+import { useRouter } from "@navigation"
 import { signIn } from "next-auth/react"
 import { useTranslations } from "next-intl"
 import { useForm } from "react-hook-form"
@@ -22,8 +22,8 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card"
 import { Label } from "@/components/ui/label"
+import { Input } from "@/components/ui/input"
 
-import { ResponsiveAlertDialog } from "../shared/responsive-alert-dialog"
 import { ResponsiveDialog } from "../shared/responsive-dialog"
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -93,12 +93,19 @@ export function AuthUserEmail({
                 {t("labelEmail")}
               </Label>
 
-              <AuthInputUniversityForm
+              {/* <AuthInputUniversityForm
                 disabled={isLoading || isGitHubLoading}
                 placeholder={t("placeholderEmail")}
                 register={register}
                 setValue={setValue}
                 {...FormData}
+              /> */}
+              <Input 
+                id="email"
+                type="email"
+                placeholder={t("placeholderEmail")}
+                disabled={isLoading || isGitHubLoading}
+                {...register("email")}
               />
 
               {errors?.email && (
